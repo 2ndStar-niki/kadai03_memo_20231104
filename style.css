@@ -1,0 +1,60 @@
+.header, .container, .all, .contents{
+    display: flex;
+    flex-direction: row;
+}
+
+.header{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contents{
+    padding: 48px;
+}
+
+.sidebar{
+    background: #333333;
+    width: 300px;
+    height: 100vh;
+    padding: 24px;
+
+    .title_sidebar{
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .option{
+        color: #ffffff;
+        font-size: 16px;
+        margin-left: 16px;
+    }
+
+    .checkbox{
+        margin-left: 16px;
+    }
+
+    .label_checkbox{
+        color: #ffffff;
+        font-size: 16px;
+    }
+}
+
+.content{
+    width: 300px;
+    height: fit-content;
+
+    .content_img{
+        width: 300px;
+    }
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.price{
+    font-size: 24px;
+    color: red;
+}
