@@ -278,10 +278,10 @@ document.getElementById("kr").addEventListener("click", function() {
         }
 });
 
-// カート入り商品を表示する処理
+// カート商品を表示する処理
 const buttonOpen_cart = document.getElementById('cart');
 const modal_cart = document.getElementById('cart_Modal');
-const buttonClose_cart = document.getElementsByClassName('modalClose')[0];
+const buttonClose_cart = document.getElementsByClassName('modalClose_cart')[0];
 
     // 「カート」がクリックされた時
     buttonOpen_cart.addEventListener('click', cart);
@@ -294,6 +294,7 @@ const buttonClose_cart = document.getElementsByClassName('modalClose')[0];
     function modalClose_cart() {
     modal_cart.style.display = 'none';
     }
+    
 
     // モーダルコンテンツ以外がクリックされた時
     addEventListener('click', outsideClose_cart);
@@ -308,3 +309,47 @@ $("#clear_cart").on("click", function(){
     localStorage.removeItem("carts");
     $("#cart_list").empty();
 });
+
+// 注文に関する処理
+let orderds = [];
+
+// 注文ボタンが押された時の処理
+$("#order").on("click", function(){
+    localStorage.setItem("ordereds", JSON.stringify(carts));
+    localStorage.removeItem("carts");
+    $("#cart_list").empty();
+    modal_cart.style.display = 'none';
+});
+
+const buttonOpen_ordered = document.getElementById('ordered');
+const modal_ordered = document.getElementById('ordered_Modal');
+const buttonClose_ordered = document.getElementsByClassName('modalClose_ordered')[0];
+
+    // 「カート」がクリックされた時
+    buttonOpen_ordered.addEventListener('click', ordered);
+    function ordered() {
+    modal_ordered.style.display = 'block';
+    
+    var ordered_Value = localStorage.getItem("ordereds");
+    if (ordered_Value) {
+        document.getElementById("ordered_list").textContent = ordered_Value;
+    }
+    }
+
+    // バツ印がクリックされた時
+    buttonClose_ordered.addEventListener('click', modalClose_ordered);
+    function modalClose_ordered() {
+    modal_ordered.style.display = 'none';
+    }
+    
+    // モーダルコンテンツ以外がクリックされた時
+    addEventListener('click', outsideClose_ordered);
+    function outsideClose_ordered(e) {
+    if (e.target == modal_ordered) {
+        modal_ordered.style.display = 'none';
+    }
+    }
+
+$("#reset").on("click", function(){
+    localStorage.clear();
+})

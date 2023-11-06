@@ -9,7 +9,7 @@
 <body>
     <div>
         <div class="header">
-            <img src="imgs/KONGOロゴ.png" alt="KONGOロゴ" width="120px">
+            <img src="imgs/KONGOロゴ.png" alt="KONGOロゴ" width="120px" id="reset">
             
             <div class="container">
                 <p id="ordered">注文履歴</p>
@@ -112,7 +112,20 @@
         </div>
         <div class="modal-body">
             <p id="cart_list"></p>
-            <button id="clear">全て削除</button>
+            <button id="clear_cart">全て削除</button>
+            <button id="order">注文する</button>
+        </div>
+        </div>
+    </div>
+
+    <div id="ordered_Modal" class="modal">
+        <div class="modal-content">
+        <div class="modal-header">
+            <p>注文履歴</p>
+            <span class="modalClose_ordered">×</span>
+        </div>
+        <div class="modal-body">
+            <p id="ordered_list"></p>
         </div>
         </div>
     </div>

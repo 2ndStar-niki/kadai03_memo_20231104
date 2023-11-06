@@ -96,7 +96,7 @@
     justify-content: space-between;
 }
   
-.modalClose, .modalClose_cart {
+.modalClose, .modalClose_cart, .modalClose_ordered {
     font-size: 2rem;
 }
   
