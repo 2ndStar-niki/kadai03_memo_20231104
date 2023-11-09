@@ -6,28 +6,56 @@
 .header{
     justify-content: space-between;
     align-items: center;
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-color: #333333;
+
+    #cart{
+        margin-right: 16px;
+    }
+}
+
+.container{
+    width: 200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub{
+    padding: 24px;
 }
 
 .contents{
-    padding: 48px;
+    padding: 4px 24px;
+    
+}
+
+.content{
+    border-style: solid;
+    padding: 12px;
+    margin: 0 4px;
+    border-width: 1px;
+    border-color: #f4f4f4;
 }
 
 .sidebar{
-    background: #333333;
     width: 300px;
     height: 100vh;
     padding: 24px;
+    background: #333333;
 
     .title_sidebar{
         color: #ffffff;
         font-size: 18px;
         font-weight: 600;
+        height: 16px;
     }
 
     .option{
         color: #ffffff;
         font-size: 16px;
         margin-left: 16px;
+        height: 8px;
     }
 
     .checkbox{
@@ -41,22 +69,24 @@
 }
 
 .content{
-    width: 300px;
+    width: 200px;
     height: fit-content;
 
     .content_img{
-        width: 300px;
+        width: 200px;
     }
 }
 
 .title{
     font-size: 18px;
     font-weight: 600;
+    height: 4px;
 }
 
 .price{
     font-size: 24px;
     color: red;
+    height: 16px;
 }
 
 .modal {
@@ -72,7 +102,7 @@
 }
   
 .modal-content {
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     margin: 20% auto;
     width: 50%;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
